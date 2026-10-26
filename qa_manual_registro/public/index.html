@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registro de usuarios | Práctica QA Manual</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <main class="contenedor">
+    <section class="tarjeta">
+      <p class="etiqueta">Práctica de QA Manual</p>
+      <h1>Registro de usuarios</h1>
+      <p class="intro">Completá los campos para crear un usuario de prueba.</p>
+
+      <form id="formRegistro" novalidate>
+        <div class="campo">
+          <label for="nombre">Nombre y apellido</label>
+          <input id="nombre" name="nombre" type="text" placeholder="Ej.: Ana Pérez">
+        </div>
+
+        <div class="campo">
+          <label for="email">Correo electrónico</label>
+          <input id="email" name="email" type="text" placeholder="Ej.: ana@correo.com">
+        </div>
+
+        <div class="campo">
+          <label for="password">Contraseña</label>
+          <input id="password" name="password" type="password" placeholder="Mínimo 8 caracteres">
+          <small>Para esta práctica, usá una contraseña de al menos 8 caracteres.</small>
+        </div>
+
+        <button type="submit">Registrar usuario</button>
+      </form>
+
+      <div id="mensaje" class="mensaje" role="status" aria-live="polite"></div>
+    </section>
+
+    <section class="tarjeta registros">
+      <div class="encabezado-registros">
+        <div>
+          <h2>Usuarios registrados</h2>
+          <p class="intro">Los registros se borran cuando se reinicia el servidor.</p>
+        </div>
+        <button id="btnActualizar" class="secundario" type="button">Actualizar</button>
+      </div>
+      <ul id="listaUsuarios" class="lista-usuarios">
+        <li class="vacio">Todavía no hay usuarios registrados.</li>
+      </ul>
+    </section>
+  </main>
+</body>
+</html>

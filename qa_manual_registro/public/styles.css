@@ -1,0 +1,162 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f2f5f9;
+  color: #1f2937;
+  line-height: 1.5;
+}
+
+.contenedor {
+  width: min(920px, 92%);
+  margin: 40px auto;
+  display: grid;
+  gap: 22px;
+}
+
+.tarjeta {
+  background: #ffffff;
+  padding: 28px;
+  border-radius: 14px;
+  box-shadow: 0 5px 22px rgba(31, 41, 55, 0.08);
+}
+
+.etiqueta {
+  margin: 0 0 8px;
+  color: #087e8b;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+h1, h2 {
+  margin-top: 0;
+  line-height: 1.2;
+}
+
+h1 {
+  margin-bottom: 8px;
+  font-size: clamp(1.7rem, 4vw, 2.2rem);
+}
+
+h2 {
+  margin-bottom: 6px;
+  font-size: 1.25rem;
+}
+
+.intro {
+  margin-top: 0;
+  color: #64748b;
+}
+
+.campo {
+  margin: 18px 0;
+}
+
+label {
+  display: block;
+  margin-bottom: 7px;
+  font-weight: 700;
+}
+
+input {
+  width: 100%;
+  padding: 12px 13px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+input:focus {
+  outline: 3px solid #b8e5e8;
+  border-color: #087e8b;
+}
+
+small {
+  display: block;
+  margin-top: 5px;
+  color: #64748b;
+}
+
+button {
+  border: 0;
+  border-radius: 8px;
+  padding: 12px 18px;
+  background: #087e8b;
+  color: white;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #06636d;
+}
+
+.secundario {
+  background: #e6f4f5;
+  color: #075b63;
+  white-space: nowrap;
+}
+
+.secundario:hover {
+  background: #ccebed;
+}
+
+.mensaje {
+  margin-top: 16px;
+  padding: 0;
+  border-radius: 8px;
+}
+
+.mensaje:not(:empty) {
+  padding: 12px;
+}
+
+.mensaje.exito {
+  color: #166534;
+  background: #dcfce7;
+}
+
+.mensaje.error {
+  color: #991b1b;
+  background: #fee2e2;
+}
+
+.encabezado-registros {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.lista-usuarios {
+  padding-left: 20px;
+}
+
+.lista-usuarios li {
+  margin: 9px 0;
+  overflow-wrap: anywhere;
+}
+
+.vacio {
+  color: #64748b;
+}
+
+@media (max-width: 560px) {
+  .contenedor {
+    margin: 20px auto;
+  }
+
+  .tarjeta {
+    padding: 20px;
+  }
+
+  .encabezado-registros {
+    flex-direction: column;
+  }
+}
